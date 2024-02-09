@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import AllUserList from "../AllUserList/AllUserList";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <AllUserList />
+    </>
+  );
+};
 
-export default Home
+export default Home;
