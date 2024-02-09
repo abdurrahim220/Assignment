@@ -11,7 +11,7 @@ const useUser = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get("https://dummyjson.com/users");
-        setData(res.data.users);
+        setData(res?.data?.users);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
