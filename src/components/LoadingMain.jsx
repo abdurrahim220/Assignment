@@ -3,10 +3,11 @@ import { RotatingLines } from "react-loader-spinner";
 
 const LoadingMain = () => {
   return (
-    <RotatingLines
+    <div className="h-screen flex items-center justify-center">
+      <RotatingLines
       visible={true}
-      height="96"
-      width="96"
+      height="160"
+      width="160"
       color="grey"
       strokeWidth="5"
       animationDuration="0.75"
@@ -14,6 +15,7 @@ const LoadingMain = () => {
       wrapperStyle={{}}
       wrapperClass=""
     />
+    </div>
   );
 };
 
