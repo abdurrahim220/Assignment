@@ -17,7 +17,7 @@
     # How to get the info of user
 
 - I use search implement in navbar to get the certain user which I am looking for
-- Use sor on name,email and company name to sort out the data
+- Use sort on name,email and company name to sort out the data
 - Also use a single details route to get the specif user information when user click on the user names
 - Also use a form to create a users
 - There are a info section where any visitors can see how many user are available in our site.
