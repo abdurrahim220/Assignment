@@ -26,9 +26,9 @@ const AllUserList = () => {
   const sortedUsers = [...data].sort(sortUsers);
 
   return (
-    <section>
-      {/* Radio buttons for sorting */}
-      <div className="mb-4 flex items-center justify-center gap-6">
+    <section className=" my-10">
+      
+      <div className="my-5 flex items-center justify-center gap-6">
         <label className="mr-4 flex items-center gap-1">
           <input
             type="radio"
@@ -62,7 +62,7 @@ const AllUserList = () => {
       </div>
 
       
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-center justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 items-center justify-center">
         {sortedUsers.map((user) => (
           <AllUserCard key={user.id} user={user} />
         ))}
