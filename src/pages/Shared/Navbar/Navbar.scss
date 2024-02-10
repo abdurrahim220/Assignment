@@ -16,7 +16,7 @@
         -webkit-backdrop-filter: blur(3.5px);
     }
     &.show {
-        background-color: var(--black3);
+        background-color: black;
     }
     &.hide {
         transform: translateY(-60px);

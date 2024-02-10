@@ -1,11 +1,12 @@
-import React from "react";
+// useUser.js
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 const useUser = () => {
   const [data, setData] = useState([]);
+  
 
-  // console.log(data)
+  // console.log(searchTerm)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,7 +19,7 @@ const useUser = () => {
     };
 
     fetchData();
-  }, []); // Empty dependency array means this effect runs once on mount
+  }, []);
 
   return [data];
 };

@@ -7,10 +7,10 @@ const HeroBanner = () => {
         className="bg-cover bg-center py-32 w-full"
         style={{ backgroundImage: "url('https://source.unsplash.com/random')" }}
       >
-        <div className="max-w-screen-xl mx-auto text-left text-white">
+        <div className="max-w-screen-xl px-5 mx-auto text-left text-white">
           <div className="flex items-center">
             <div className="w-1/2">
-              <h1 className="text-5xl font-medium mb-6">
+              <h1 className="xl:text-5xl text-2xl md:text-3xl lg:text-4xl  font-medium mb-6">
                 Welcome to My Dummy User Details page
               </h1>
               <p className="text-xl mb-12">
