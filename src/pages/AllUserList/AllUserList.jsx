@@ -29,22 +29,40 @@ const AllUserList = () => {
     <section>
       {/* Radio buttons for sorting */}
       <div className="mb-4 flex items-center justify-center gap-6">
-        <label className="mr-4">
-          <input type="radio" name="sort" value="name" checked={sortBy === "name"} onChange={handleSortChange} />
-           Name
+        <label className="mr-4 flex items-center gap-1">
+          <input
+            type="radio"
+            name="sort"
+            value="name"
+            checked={sortBy === "name"}
+            onChange={handleSortChange}
+          />
+          Name
         </label>
-        <label className="mr-4">
-          <input type="radio" name="sort" value="email" checked={sortBy === "email"} onChange={handleSortChange} />
-           Email
+        <label className="mr-4 flex items-center gap-1">
+          <input
+            type="radio"
+            name="sort"
+            value="email"
+            checked={sortBy === "email"}
+            onChange={handleSortChange}
+          />
+          Email
         </label>
-        <label>
-          <input type="radio" name="sort" value="companyName" checked={sortBy === "companyName"} onChange={handleSortChange} />
-           Company Name
+        <label className="mr-4 flex items-center gap-1">
+          <input
+            type="radio"
+            name="sort"
+            value="companyName"
+            checked={sortBy === "companyName"}
+            onChange={handleSortChange}
+          />
+          Company Name
         </label>
       </div>
 
-      {/* Display sorted users */}
-      <div className="flex flex-wrap gap-4 justify-center">
+      
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-center justify-center">
         {sortedUsers.map((user) => (
           <AllUserCard key={user.id} user={user} />
         ))}
