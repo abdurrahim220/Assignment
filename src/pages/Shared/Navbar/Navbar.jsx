@@ -64,6 +64,7 @@ const Navbar = () => {
           <h1 className="text-red-500">Assignment</h1>
         </div>
         <ul className="menuItems">
+          <li className="menuItem" onClick={() => navigate("/createUser")}>Create User</li>
           <li className="menuItem">About</li>
           <li className="menuItem">Contact Us</li>
           <li className="menuItem">

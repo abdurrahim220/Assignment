@@ -6,9 +6,8 @@ import HeroBanner from "../HeroBanner/HeroBanner";
 const Home = () => {
   return (
     <div >
-      <HeroBanner/>
+      {/* <HeroBanner/> */}
       <div className="max-w-screen-xl px-5 mx-auto">
-
       <AllUserList />
       </div>
     </div>
