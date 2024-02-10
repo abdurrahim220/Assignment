@@ -10,8 +10,14 @@ const AllUserList = () => {
 
   const [sortBy, setSortBy] = useState("name");
 
+  const [showAll, setShowAll] = useState(false);
+
   const handleSortChange = (event) => {
     setSortBy(event.target.value);
+  };
+
+  const handleShowAll = () => {
+    setShowAll(true);
   };
 
   const sortUsers = (a, b) => {
@@ -27,15 +33,13 @@ const AllUserList = () => {
     }
   };
 
-  // Filter based on firstName
   const filteredUsers = data.filter((user) =>
     user.firstName.toLowerCase().includes(search.toLowerCase())
   );
 
-  // Sort the filtered users
   const sortedUsers = [...filteredUsers].sort(sortUsers);
 
-  // const sortedUsers = [...data].sort(sortUsers);
+  const displayedUsers = showAll ? sortedUsers : sortedUsers.slice(0, 10);
 
   return (
     <section className=" my-10">
@@ -72,7 +76,7 @@ const AllUserList = () => {
         </label>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 items-center justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-items-center justify-center">
         {sortedUsers.length === 0 ? (
           <div className="flex items-center justify-center">
             <p className="text-3xl text-red-800 font-semibold text-center ">
@@ -80,7 +84,18 @@ const AllUserList = () => {
             </p>
           </div>
         ) : (
-          sortedUsers.map((user) => <AllUserCard key={user.id} user={user} />)
+           displayedUsers.map((user) => <AllUserCard key={user.id} user={user} />)
+        )}
+      </div>
+
+      <div className="flex items-center justify-center my-5">
+      {!showAll && (
+          <button
+            className="py-3 px-5 bg-blue-700 text-white font-semibold rounded-xl"
+            onClick={handleShowAll}
+          >
+            Show All Users
+          </button>
         )}
       </div>
     </section>

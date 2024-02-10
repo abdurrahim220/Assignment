@@ -9,7 +9,7 @@ const UserDetails = ({ user }) => {
   } = user;
 
   return (
-    <div className="max-w-xs bg-white  rounded p-4 mb-4">
+    <div className="max-w-xs bg-white h-96 w-96 rounded p-4 mb-4">
     <img
       src={image}
       alt="User Avatar"

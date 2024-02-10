@@ -8,10 +8,20 @@ const SingleUserDetails = () => {
   const [data] = useUser();
 
   const user = data?.find((user) => user.id.toString() === id);
-//   console.log(user);
+  //   console.log(user);
 
   return (
-    <div>{user ? <UserDetails user={user} /> : <p>User not found</p>}</div>
+    <div>
+      <div className="flex items-center justify-center my-10">
+        <span className="text-5xl text-center font-bold text-green-600">
+          Here is the User information <br />
+          <span className="text-yellow-600">That you want to see</span>
+        </span>
+      </div>
+      <div className="flex items-center justify-center my-10">
+        {user ? <UserDetails user={user} /> : <p>User not found</p>}
+      </div>
+    </div>
   );
 };
 

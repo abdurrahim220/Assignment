@@ -1,16 +1,26 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 const UserForm = ({ onSubmit }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors },reset
   } = useForm();
+
+  const handleFormSubmit = () => {
+    Swal.fire({
+      icon: "success",
+      title: "User Added!",
+      text: "The user has been successfully added.",
+    });
+    reset()
+  };
 
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(handleFormSubmit)}
       className="max-w-md mx-auto mt-4 p-6 bg-white rounded-xl shadow-md"
     >
       <div className="mb-4">

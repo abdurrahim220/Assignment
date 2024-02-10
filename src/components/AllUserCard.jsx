@@ -13,7 +13,7 @@ const AllUserCard = ({ user }) => {
   } = user;
 
   return (
-    <div className="max-w-xs bg-white shadow-md rounded p-4 mb-4">
+    <div className="max-w-xs w-72 h-80 rounded-lg bg-white shadow-md p-4">
       <img
         src={image}
         alt="User Avatar"
