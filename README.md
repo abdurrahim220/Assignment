@@ -1,8 +1,23 @@
-# React + Vite
+    User Manual Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#
 
-Currently, two official plugins are available:
+    # Npm packages I use
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- This is a single page react application were i use react and vite and css framework TailwindCSS
+- I use axios to get the dummy data form api
+- React icons for icon
+- For multiple page navigate i use React-Router-Dom
+- For forms I user React-Hook-Form
+- For loader i user React-Spinner
+- To show notification i use sweet alert 2
+
+#
+
+    # How to get the info of user
+
+- I use search implement in navbar to get the certain user which I am looking for
+- Use sor on name,email and company name to sort out the data
+- Also use a single details route to get the specif user information when user click on the user names
+- Also use a form to create a users
+- There are a info section where any visitors can see how many user are available in our site.
